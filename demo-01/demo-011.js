@@ -1,22 +1,10 @@
 // 135. Candy
+const { getType, arraySum } = require('../utils');
 
 const demo = [1, 0, 2];
 
-const whatType = item => {
-  const itemType = Object.prototype.toString.call(item);
-  return itemType.slice(8, -1);
-}
-
-const sum = arr => {
-  if (whatType(arr) !== 'Array')
-    return 0;
-  let sum = 0;
-  arr.forEach(val => sum += val);
-  return sum;
-}
-
 const candy = ratings => {
-  if (whatType(ratings) !== 'Array')
+  if (getType(ratings) !== 'Array')
     return 0;
 
   const length = ratings.length;
@@ -36,7 +24,7 @@ const candy = ratings => {
     }
   }
 
-  return sum(num);
+  return arraySum(num);
 }
 
 const result = candy(demo);

@@ -1,17 +1,12 @@
 // 455. Assign Cookies
 
+const { sortNum, getType } = require('../utils');
+
 const demo1 = [1, 2];
 const demo2 = [1, 2, 3];
 
-const sortNum = (a, b) => (a - b);
-
-const whatType = (item) => {
-  const itemType = Object.prototype.toString.call(item);
-  return itemType.slice(8, -1);
-}
-
 const findContentChildren = (children, cookies) => {
-  if (whatType(children) !== 'Array' || whatType(cookies) !== 'Array')
+  if (getType(children) !== 'Array' || getType(cookies) !== 'Array')
     return 0;
 
   children.sort(sortNum);
