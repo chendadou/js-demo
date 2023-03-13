@@ -17,9 +17,26 @@ const arraySum = arr => {
   return sum;
 };
 
+// 4. 统计字符出现的次数
+const totalChar = str => {
+  const length = str.length;
+  const obj = {};
+
+  for (let i = 0; i < length; i++) {
+    if (obj[str[i]]) {
+      obj[str[i]]++;
+    } else {
+      obj[str[i]] = 1;
+    }
+  }
+
+  return obj;
+}
+
 module.exports = {
   sortNum,
   sortArr,
   getType,
   arraySum,
+  totalChar,
 }
