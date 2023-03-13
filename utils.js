@@ -1,5 +1,6 @@
 // 1. 从小到大排序
 const sortNum = (a, b) => (a - b);
+const sortArr = (a, b) => (a[1] - b[1]);
 
 // 2. 数据结构类型的判断
 const getType = (item) => {
@@ -18,6 +19,7 @@ const arraySum = arr => {
 
 module.exports = {
   sortNum,
+  sortArr,
   getType,
   arraySum,
 }

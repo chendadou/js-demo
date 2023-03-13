@@ -1,4 +1,4 @@
-// 455. Assign Cookies
+// 455. Assign Cookies(Easy)
 
 const { sortNum, getType } = require('../utils');
 
@@ -26,4 +26,4 @@ const findContentChildren = (children, cookies) => {
 }
 
 const result = findContentChildren(demo1, demo2);
-console.log(result);
+console.log('result: ', result);
