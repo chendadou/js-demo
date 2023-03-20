@@ -1,14 +1,18 @@
 // 1. 从小到大排序
 const sortNum = (a, b) => (a - b);
-const sortArr = (a, b) => (a[1] - b[1]);
+const sortArr1 = (a, b) => (a[1] - b[1]);
 
-// 2. 数据结构类型的判断
+// 2. 从大到小排序
+const sortNumB = (a, b) => (b - a);
+const sortArr0 = (a, b) => (b[0] - a[0]);
+
+// 3. 数据结构类型的判断
 const getType = (item) => {
   const itemType = Object.prototype.toString.call(item);
   return itemType.slice(8, -1);
 };
 
-// 3. 数字类数组求和
+// 4. 数字类数组求和
 const arraySum = arr => {
   if (getType(arr) !== 'Array')
     return 0;
@@ -17,7 +21,7 @@ const arraySum = arr => {
   return sum;
 };
 
-// 4. 统计字符出现的次数
+// 5. 统计字符出现的次数
 const totalChar = str => {
   const length = str.length;
   const obj = {};
@@ -35,7 +39,9 @@ const totalChar = str => {
 
 module.exports = {
   sortNum,
-  sortArr,
+  sortNumB,
+  sortArr0,
+  sortArr1,
   getType,
   arraySum,
   totalChar,
